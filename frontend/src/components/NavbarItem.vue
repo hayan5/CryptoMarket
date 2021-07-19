@@ -17,3 +17,9 @@ export default {
   }
 }
 </script>
+<style>
+.navbar-item {
+  margin: 0 auto;
+  font-size: 1.25rem
+}
+</style>
