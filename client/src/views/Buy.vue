@@ -1,11 +1,5 @@
 <template>
-  <div class="buy">
-    Buy
+  <div class="about">
+    <h1>Buy</h1>
   </div>
 </template>
-
-<script>
-export default {
-  name: "Buy"
-};
-</script>

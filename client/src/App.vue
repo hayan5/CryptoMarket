@@ -1,26 +1,62 @@
 <template>
-  <main>
-    <Header/>
-    <router-view />
-  </main>
+  <div id="app">
+    <app-header :navbarItems="navbarItems" />
+    <app-main />
+
+    <!-- <layout /> -->
+    <!-- <router-link to="/">Home</router-link> 
+    <router-link to="/about">About</router-link> -->
+    <!-- <router-view /> -->
+  </div>
 </template>
-<script>
-import Header from '@/components/Header.vue';
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { AppHeader, AppMain } from './Layout/index'
+// import Layout from './layout/index.vue'
 
-export default {
+const App = defineComponent({
   components: {
-    Header,
+    AppHeader,
+    AppMain
+  },
+  data() {
+    const navbarItems = [
+      {
+        path: 'vote',
+        text: 'Vote'
+      },
+      {
+        path: 'buy',
+        text: 'Buy'
+      }
+    ]
+    return {
+      navbarItems
+    }
   }
-}
+})
+export default App
 </script>
-<style lang="scss">
-@import 'scss/_base.scss';
 
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>

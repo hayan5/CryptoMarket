@@ -1,11 +1,5 @@
 <template>
-  <div class="vote">
-    Vote
+  <div class="about">
+    <h1>Vote</h1>
   </div>
 </template>
-
-<script>
-export default {
-  name: "Vote"
-};
-</script>
