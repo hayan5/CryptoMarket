@@ -15,11 +15,12 @@
   </nav>
 </template>
 <script lang="ts">
-import {defineComponent, PropType} from 'vue'
+import { defineComponent, PropType } from 'vue'
 import NavbarItem, {INavbarItem} from './NavbarItem.vue'
 import Hamburger from './Hamburger.vue'
-import { useStore } from '../store/use'
-import {ActionTypes} from '../store/modules/app/action-types'
+import { useStore } from '../store'
+import { ActionTypes } from '../store/action-types'
+
 export default defineComponent({
   components: {
     NavbarItem,

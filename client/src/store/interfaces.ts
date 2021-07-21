@@ -6,10 +6,6 @@ export interface IRootState {
   app: AppStateTypes
 }
 
-// export interface IMergedState extends IRootState {
-//   appModule: AppStateTypes
-// }
-
 export interface AppStateTypes {
   sidebar: {
     opened: Boolean
