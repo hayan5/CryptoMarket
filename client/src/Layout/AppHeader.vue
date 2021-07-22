@@ -1,7 +1,8 @@
 <template>
+  <div class="navbar-container">
   <nav class="navbar">
     <div class="navbar-brand">
-      <router-link :to="'/'" class="navbar-item is-size-1">{{navbarBrand}}</router-link>
+      <router-link :to="'/'" class="navbar-item is-size-2">{{navbarBrand}}</router-link>
       <hamburger
         :isActive="sidebar()"
         @toggle-click="toggleSideBar" 
@@ -13,6 +14,7 @@
       </div>
     </div>
   </nav>
+  </div>
 </template>
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
@@ -54,7 +56,16 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
+// .navbar-container {
+//   padding: 1rem 0rem;
+//   border-bottom: 1px solid black;
+// }
 .navbar {
   border-bottom: 1px solid black;
+  // margin: 1rem 0rem;
+  max-height: 4rem;
+}
+.navbar-brand{
+  max-height: 4rem;
 }
 </style>
